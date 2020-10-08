@@ -1,0 +1,213 @@
+<html>
+    <head>
+        <title>My Website</title>
+    <link rel="stylesheet" href="Page3.css" />
+</head>
+<body>
+    <div id="wrapper">
+    <div id="fallingchibi">
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   
+    </div>
+<div id="container2">
+    <div id="butt">
+        <div id="title">
+            <span>Age Finder:-<span>
+        </div>
+        <div id="inner2">
+                <input type="button" style="font-size: 18px; font-family:Comic Sans MS, cursive, sans-serif; color: pink; background-color: white;" id="ageFinderbtn" onclick="getAge()" value="START">
+        </div>
+    <script>
+        function getAge(){
+         w= prompt("What is your name?","");
+         x = prompt("What is Your Date of Birth in format (yyyy-mm-dd): ","");
+         x = new Date(x);
+         document.getElementById("age").innerHTML=" " + calcAge(x);
+       }
+   
+       function calcAge(dob) {
+         var now = new Date();
+         var dob = new Date(dob);
+         var year=now.getYear()-dob.getYear();
+         var month=now.getMonth()-dob.getMonth();
+         if(month<0){
+           month=now.getMonth()+12-dob.getMonth();
+           year=year-1;
+         }
+         var day=now.getDate()-dob.getDate();
+         if(day<0){
+           var monthNumber=dob.getMonth();
+           var fullDate=getFullDate(monthNumber);
+           day=now.getDate()+fullDate-dob.getDate();
+           month=month-1;
+         }
+   
+         return year +" Years, "+ month +" Months, " + day + " Days!";
+       };
+       function getFullDate(x){
+         switch(x){
+           case 0:
+             return 31;
+             break;
+           case 1:
+             return 28;
+             break;
+           case 2:
+             return 31;
+             break;
+           case 3:
+             return 30;
+             break;
+           case 4:
+             return 31;
+             break;
+           case 5:
+             return 30;
+             break;
+           case 6:
+             return 31;
+             break;
+           case 7:
+             return 31;
+             break;
+           case 8:
+             return 30;
+             break;
+           case 9:
+             return 31;
+             break;
+           case 10:
+             return 30;
+             break;
+           case 11:
+             return 31;
+         }
+       }
+   
+     </script>
+      
+        <div id="Age">
+            <h1>Your Age: </h1>
+            <span id="age"></span>
+        </div>
+    </div>
+<div id="menu">
+ <ul>
+    <li><a href="Page1.html"> Page 1 </a></li>
+    <li><a href="Page2.html"> Page 2 </a></li>
+    <li><a href="Page3.html"> Page 3 </a></li>
+    <li><a href="Page4.html"> Page 4</a></li>
+    <li><a href="Page5.html"> Page 5</a></li>
+ </ul>
+</div>
+</div>
+</div>
+</body>
+</html>
